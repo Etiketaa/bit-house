@@ -1,0 +1,32 @@
+.floating-cart {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+        .product-card {
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .category-btn {
+            margin: 5px;
+            min-width: 120px;
+        }
+        .active-category {
+            background-color: #0d6efd !important;
+            color: white !important;
+        }
+.carousel-item img {
+    max-height: 60vh;
+    object-fit: contain;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    padding: 15px;
+}
