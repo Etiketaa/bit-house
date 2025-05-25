@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bit-House - Catálogo</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #f5f5f5;">
+    <!-- Header -->
+   <header class="p-4" style="background-color: #f5f5f5;">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between text-center text-md-start">
+        <div class="d-flex align-items-center gap-3 mb-3 mb-md-0">
+            <img src="./img/bit-house.png" alt="bothouselogo" class="logo" style="width: 100px; height: 100px;">
+            <h1 class="m-0">Bit-House Store</h1>
+        </div>
+        <button class="btn btn-primary" onclick="document.getElementById('products').scrollIntoView()">
+            Ver Productos
+        </button>
+    </div>
+</header>
+<section class="text-center my-4">
+    <img src="./img/banner.png" alt="Banner BitHouse" class="img-fluid">
+</section>
+    <!-- Filtros de Categoría -->
+    <section class="container mt-4">
+        <div class="row justify-content-center" id="category-filters">
+            <div class="col-auto mb-3">
+                <button class="btn btn-outline-primary category-btn active-category" 
+                        onclick="filterProducts('all')">
+                    Todos
+                </button>
+                <button class="btn btn-outline-primary category-btn" 
+                        onclick="filterProducts('Auriculares')">
+                    Auriculares
+                </button>
+                <button class="btn btn-outline-primary category-btn" 
+                        onclick="filterProducts('Accesorios')">
+                    Accesorios
+                </button>
+                <button class="btn btn-outline-primary category-btn" 
+                        onclick="filterProducts('Cargadores')">
+                    Cargadores
+                </button>
+                <button class="btn btn-outline-primary category-btn" 
+                        onclick="filterProducts('Cables')">
+                    Cables
+                </button>
+                <button class="btn btn-outline-primary category-btn" 
+                        onclick="filterProducts('Electro y Hogar')">
+                    Electro y Hogar
+                </button>
+                <button class="btn btn-outline-primary category-btn" 
+                        onclick="filterProducts('Pendrive')">
+                    Pendrive
+                </button>
+                <button class="btn btn-outline-primary category-btn" 
+                        onclick="filterProducts('Smartwatch')">
+                    Relojes Smart
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos -->
+    <section id="products" class="container mt-3">
+        <h2 class="mb-4">Nuestros Productos</h2>
+        <div class="row" id="product-list"></div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="productModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalProductName"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Carrusel de imágenes -->
+                <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" id="carousel-inner">
+                        <!-- Imágenes se insertarán aquí -->
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+                
+                <p id="modalProductDescription" class="mt-3"></p>
+                <h6>Precio: $<span id="modalProductPrice"></span></h6>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" onclick="addToCart(selectedProduct.id)">
+                    Agregar al carrito
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Carrito Flotante -->
+    <button class="btn btn-warning floating-cart" onclick="completeOrder()">
+        🛒 <span id="cart-count">0</span> items - Hacer Pedido
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js">
+    </script>
+</body>
+</html>
