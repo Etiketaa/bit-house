@@ -1291,19 +1291,7 @@ price: 11.762,
     ],
     category:"Cables",
   },
-  {
-    id:99,
-    name:"CABLE TYPE C / TYPE C 1.00 MTS - KARSEN ",
-    price:2680,
-    description:"Largo de 1mt. Entrada y Salida USB-C",
-    image:"http://multibahia.com/imagenes/ART_1318_0.JPG",
-    images:["http://multibahia.com/imagenes/ART_1318_0.JPG",
-      "http://multibahia.com/imagenes/ART_1066_2.JPG",
-      "http://multibahia.com/imagenes/ART_1318_1.JPG",
-      "http://multibahia.com/imagenes/ART_1318_3.JPG"
-    ],
-    category:"Cables",
-  },
+  
         ];
 
         let cart = [];
