@@ -929,7 +929,7 @@ price: 11.762,
   {
     id:72,
     name:"ABRIDOR DE VINO AUTOMATICO SUONO",
-    price:28430,
+    price:"Sin Stock",
     description:"Sacacorchos Automatico, recargable con USB. SUONO",
     image:"http://multibahia.com/imagenes/ART_HOG0058_0.JPG",
     images:["http://multibahia.com/imagenes/ART_HOG0058_0.JPG",
